@@ -62,3 +62,16 @@ body {
 .board {
   box-shadow: -1px 5px 42px 10px rgba(134, 134, 134, 0.51);
 }
+
+.winner {
+  font-family: "Ubuntu";
+  font-size: 26px;
+  margin-top: 20px;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
