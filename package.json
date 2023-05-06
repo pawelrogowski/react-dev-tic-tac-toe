@@ -1,5 +1,6 @@
 {
   "name": "react-tic-tac-toe",
+  "homepage": "https://pawelrogowski.github.io/react-dev-tic-tac-toe/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

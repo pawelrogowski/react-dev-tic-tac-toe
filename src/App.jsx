@@ -4,8 +4,6 @@ import { ResetButton } from "./components/ResetButton/ResetButton";
 import { GoBackButton } from "./components/GoBackButton/GoBackButton";
 import { useState } from "react";
 
-// In App.js
-
 export default function App() {
   const [nextSymbol, setNextSymbol] = useState("❌");
   const [cells, setCells] = useState(Array(9).fill(null));
@@ -45,10 +43,8 @@ export default function App() {
   const handleCellToggle = (index) => {
     const newCells = [...cells];
     if (newCells[index] === null && winner === null) {
-      // only allow moves if there is no winner
       newCells[index] = nextSymbol;
-      const newHistory = [...history, newCells]; // add the new state to the history
-      setCells(newCells);
+      const newHistory = [...history, newCells];
       setHistory(newHistory);
       setCurrentMove(newHistory.length - 1);
       setNextSymbol(nextSymbol === "❌" ? "🇴" : "❌");
@@ -58,11 +54,11 @@ export default function App() {
 
   const handleGoBack = () => {
     if (currentMove > 0) {
-      const newHistory = history.slice(0, currentMove); // remove the last state from the history
-      const prevBoard = newHistory[newHistory.length - 1]; // get the previous state
+      const newHistory = history.slice(0, currentMove);
+      const prevBoard = newHistory[newHistory.length - 1];
       setCells(prevBoard);
       setHistory(newHistory);
-      setCurrentMove(currentMove - 1); // set the current move to the previous state
+      setCurrentMove(currentMove - 1);
       setNextSymbol(nextSymbol === "❌" ? "🇴" : "❌");
       setWinner(calculateWinner(prevBoard));
     } else {
