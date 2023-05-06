@@ -1,0 +1,15 @@
+.clear-board-button {
+  text-align: center;
+  font-size: 30px;
+  width: 240px;
+  height: 60px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 250ms;
+}
+
+.clear-board-button:hover {
+  background-color: rgb(218, 20, 20);
+  color: black;
+}
