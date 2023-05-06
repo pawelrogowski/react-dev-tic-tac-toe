@@ -45,6 +45,7 @@ export default function App() {
     if (newCells[index] === null && winner === null) {
       newCells[index] = nextSymbol;
       const newHistory = [...history, newCells];
+      setCells(newCells);
       setHistory(newHistory);
       setCurrentMove(newHistory.length - 1);
       setNextSymbol(nextSymbol === "❌" ? "🇴" : "❌");
